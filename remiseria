@@ -1,22 +1,41 @@
-object roxana 
-    var valor = 0
-    method valorPorKm(cliente, km) { return valor }
+//clientes
+ 
+object ludmila {
+	method valorPorKm() { return 18 } }
 
-object gabriela 
-    method valorPorKm(cliente, km) { return valorPorKm * 0.20 } 
+object anaMaria {
+	var property esEstable = true
+	method valorPorKm() { 
+		if (esEstable) return 30
+      else  return 25 } }
 
-object mariela 
-	method valorPorKm(cliente, km) { return valor >= 50 }
 
-object juana 
-	    var km = 0
-    method valorPorKm(cliente, km) { 
-    if km -= 8 {
-        100
-    } else { 
-        200
-    }
+object teresa {
+	var property valorPorKm = 22 }
+
+object melina {
+	var property cliente
+	method valorPorKm() = cliente.valorPorKm - 3 }
+	
+	
+//remiseras
+	
+	object roxana {
+    method valorPorViaje(cliente, km) = cliente.valorPorKm() * km }
+
+object gabriela {
+    method valorPorViaje(cliente, km) = cliente.valorPorKm * 1.2 } 
+
+object mariela {
+	method valorPorViaje(cliente, km) = 50.max(cliente.valorPorKm() * km) }
+
+object juana {
+	method valorPorViaje(cliente, km) { 
+		if (km > 8) return 100
+		else return 200
+		} 
 }
 
-object lucia
-	method valorPorKm(cliente, km) { 
+object lucia {
+	var property reemplaza
+	method valorPorViaje(cliente, km) = reemplaza.valorPorViaje(cliente, km) }
