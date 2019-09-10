@@ -1,0 +1,22 @@
+object roxana 
+    var valor = 0
+    method valorPorKm(cliente, km) { return valor }
+
+object gabriela 
+    method valorPorKm(cliente, km) { return valorPorKm * 0.20 } 
+
+object mariela 
+	method valorPorKm(cliente, km) { return valor >= 50 }
+
+object juana 
+	    var km = 0
+    method valorPorKm(cliente, km) { 
+    if km -= 8 {
+        100
+    } else { 
+        200
+    }
+}
+
+object lucia
+	method valorPorKm(cliente, km) { 
